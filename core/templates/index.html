@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section>
+  <figure class="logo">
+    <img title="Jorginho o coelho da sorte" src="{% static 'img/jorginho.svg'%}" alt="Jorginho o coelho da sorte" />
+    <h2 title="Jorginho o coelho da sorte" alt="Jorginho o coelho da sorte">Jorginho o coelho da sorte</h2>
+  </figure>
+    <h1 title="abaixo os seus números da sorte" >seus números da sorte</h1>
+    <ul class="numberList">{% for i in a %}
+      <li title="Número: {{ i }}">{{ i }}</li>{% endfor %}
+    </ul>
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        <button class="btnGerar" type="submit" name="button">GERAR</button>
+    </form>
+    <ul>
+      <a href="https://maurxdev.github.io/" target="_blank"><li>criado por maurx</li></a>
+    </ul>
+</section>
+{% endblock %}

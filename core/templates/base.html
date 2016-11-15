@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" media="screen" title="no title">
+    <title>pé de coelho</title>
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Jorginho o seu coelho da sorte">
+    <meta property="og:site_name" content="Pé de Coelho">
+    <meta property="og:description" content="os resultados da proxima megasena estão aqui!">
+    <meta property="og:image" content="{% static 'img/capa.jpeg' %}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
